@@ -1,0 +1,22 @@
+.containerImage {
+  width: 160px;
+  height: 180px;
+  margin-right: 20px;
+}
+.containerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  width: 240px;
+}
+.quantity {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+}
+.containerCartItem {
+  background-color: #f5f5f5;
+  padding: 10px;
+}

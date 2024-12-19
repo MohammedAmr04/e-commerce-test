@@ -1,0 +1,13 @@
+.containerImg {
+  position: relative;
+}
+.categoryImg {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.5s;
+}
+.containerImg:hover img {
+  transform: scale(1.1);
+}

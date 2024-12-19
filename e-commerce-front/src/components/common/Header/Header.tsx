@@ -1,33 +1,44 @@
-import { Badge, Container, Nav, Navbar } from 'react-bootstrap'
-import HeaderBasket from '../../eCommerce/HeaderBasket/HeaderBasket'
-
+import { Container, Nav, Navbar } from "react-bootstrap";
+import HeaderBasket from "../../eCommerce/HeaderBasket/HeaderBasket";
+import { NavLink } from "react-router-dom";
+import "./styles.css";
 export default function Header() {
-    return (
-        <header className='pt-1 pb-1'>
-            <div className='d-flex justify-content-between align-items-center'>
-                <h1><Badge>Souq</Badge></h1>
-                {/* Basket */}
-                <HeaderBasket/>
-            </div>
-            <Navbar expand="lg" className=" bg-dark"
-                data-bs-theme="dark"
-            >
-                <Container>
-                    <Navbar.Brand href="#home">Souq</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">Catgories</Nav.Link>
-                            <Nav.Link href="#link">about</Nav.Link>
-                        </Nav>
-                        <Nav >
-                            <Nav.Link href="#home">Login</Nav.Link>
-                            <Nav.Link href="#home">Register</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-      </header>
-  )
+  return (
+    <header className="pt-1 pb-1" style={{ backgroundColor: "#274D60" }}>
+      <Navbar expand="lg" className="">
+        <Container>
+          <Navbar.Brand
+            as={NavLink}
+            to="/home"
+            style={{ color: "#6ba3be", fontWeight: "bold" }}
+          >
+            WearAura
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto ">
+              <Nav.Link className="" as={NavLink} to="/">
+                Home
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/categories">
+                Catgories
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/about-us">
+                about
+              </Nav.Link>
+
+              <Nav.Link as={NavLink} to="/login">
+                Login
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/register">
+                Register
+              </Nav.Link>
+            </Nav>
+            <Nav></Nav>
+          </Navbar.Collapse>
+          <HeaderBasket />
+        </Container>
+      </Navbar>
+    </header>
+  );
 }

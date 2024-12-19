@@ -1,0 +1,17 @@
+.nav-link {
+  color: white;
+  opacity: 50%;
+}
+.active {
+  border-bottom: solid 1px #031716;
+  position: relative;
+  transition: 0.3s;
+  background-color: aqua;
+  border-radius: 20px;
+  padding: 10px 5px;
+  width: fit-content;
+}
+.active:hover {
+  color: #031716;
+  transform: scale(1.1);
+}
